@@ -19,11 +19,11 @@ p You can chose 1 position from each course:
 = form_with url: orders_path do |f|
   p
     = f.label :first_dish, 'First dish'
-    = f.select :first_dish, Menu::FIRST_COURSE
+    = f.select :first_dish, Menu::FIRST_COURSE.keys
   p
     = f.label :second_dish, 'Second dish'
-    = f.select :second_dish, Menu::SECOND_COURSE
+    = f.select :second_dish, Menu::SECOND_COURSE.keys
   p
     = f.label :drink, 'Drink'
-    = f.select :drink, Menu::THIRD_COURSE
+    = f.select :drink, Menu::THIRD_COURSE.keys
   p= f.submit 'Submit'
