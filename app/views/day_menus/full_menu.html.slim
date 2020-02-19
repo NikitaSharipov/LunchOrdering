@@ -1,0 +1,29 @@
+p Menu for today:
+.first_course
+  p First course:
+  - Menu::FIRST_COURSE.each do |title, price|
+    p #{title.to_s.capitalize}: #{price}
+.second_course
+  p Second course:
+  - Menu::SECOND_COURSE.each do |title, price|
+    p #{title.to_s.capitalize}: #{price}
+.third_course
+  p Third course:
+  - Menu::THIRD_COURSE.each do |title, price|
+    p #{title.to_s.capitalize}: #{price}
+
+
+
+p You can chose 1 position from each course:
+
+= form_with url: orders_path do |f|
+  p
+    = f.label :first_dish, 'First dish'
+    = f.select :first_dish, Menu::FIRST_COURSE
+  p
+    = f.label :second_dish, 'Second dish'
+    = f.select :second_dish, Menu::SECOND_COURSE
+  p
+    = f.label :drink, 'Drink'
+    = f.select :drink, Menu::THIRD_COURSE
+  p= f.submit 'Submit'

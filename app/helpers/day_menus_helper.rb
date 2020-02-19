@@ -1,0 +1,2 @@
+module DayMenusHelper
+end
