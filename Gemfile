@@ -30,6 +30,10 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
+#Simple Calendar is designed to do one thing really really well: render a calendar.
+#It lets you render a calendar of any size.
+gem "simple_calendar", "~> 2.0"
+
 gem 'devise'
 gem 'slim'
 
